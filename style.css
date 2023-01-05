@@ -1,0 +1,125 @@
+:root {
+
+    --red:#dc4266;
+    --blue: #3072e6;
+    --background: #00032c;
+    --white: #ffffff;
+    --profile-photo-size: 120px;
+
+    font-family: 'Roboto', sans-serif; /*Atribuição da fonte, já inclusa no html*/
+
+
+}
+
+h1, p, body, button { /*reseta os espaçamentos de bordas*/
+    margin: 0;
+}
+
+i {
+    font-size: 24px;
+}
+
+
+body {
+    background-color: var(--background);
+    color: var(--white);
+
+}
+
+
+main {
+    margin: 0 auto; /*centralizando 0 em cima e vaixo e auto nas laterais o espaçamento é para fora*/
+    max-width: 500px; /*largura máxima que a tela ira abrir, respansivo*/
+    padding: 0 15px; /*espaçamento do pedding é para dentro do baby*/
+}
+
+
+
+header{
+    margin-top: 50px;
+    display: flex; /*deixa flexivel para atribuir novas propriedades de tamanho de tela*/
+    flex-direction: column; /*que que o conteudo seja apresentado como coluna*/
+    align-items: center; /*alinha tudo no centro*/
+    
+}
+
+h1 {
+    color: var(--red);
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+.occupation {
+    margin-top: 5px;
+
+}
+.photo-container{
+    overflow: hidden; /*ignora tudo que tiver de fora desse tamanho na imagem*/
+     width: var(--profile-photo-size); /*largura da imagem*/
+     height: var(--profile-photo-size); /*altura da imagem*/
+     border: 4px solid var(--blue); /*largura e cor da borda da imagem*/
+ border-radius: 100%; /*propriedade que arredendo a borda*/
+ 
+ }
+ .profile-photo {
+    /*margin-top: -10px; /*levanta a foto, trás para cima o menos, não usei a propriedade porque iria levantr a foto e cortar a parte de baixo-*/
+     width: var(--profile-photo-size); /*tamanho da foro dentro do container*/
+    
+ }
+
+
+section{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.link {
+    background-color: var(--red);
+    text-decoration: none;
+    color: var(--white);
+    margin-top: 30px;
+    height: 50px;
+
+    width: 100%;
+    max-width: 270px;
+    border-radius: 5px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 250ms;
+}
+
+.link:first-child { /*o primeiro filho será alterado, o link git, vai subir*/
+    margin-top: 0;
+}
+
+.link:hover{ /*propriedade quando o usuário passar o mouse dá um efeito*/
+filter: brightness(1.2); /*passar omouse ele brilha*/
+transform: translateY(-2px) /*dá uma subida no botão, desloca ele de lugar*/
+}
+
+.link i {
+    margin-right: 7px; /*espaçamento entre icone e texto*/
+
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    
+}
+
+.call-me { 
+    text-align: center;
+}
+
+footer i{
+    margin-top: 15px;
+    color: var(--blue);
+}
